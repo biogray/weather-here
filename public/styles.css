@@ -1,0 +1,59 @@
+body {
+      background-color: antiquewhite;
+ 
+}
+
+p  {
+      padding: 10px;
+}
+
+section {
+      display: flex;
+      margin-top: 30%;
+      margin-left: 30%;
+
+}
+
+#div2 {
+
+      border: black solid 1px; 
+}
+
+#map { 
+      height: 340px; 
+      width: 500px;
+      margin: 8px 0px;
+}
+
+#root {
+      background-color: wheat;
+      border: black solid 1px;
+      width: 530px;
+      height: 360px;
+      border-radius: 15px;   
+      display: flex;
+    
+      flex-direction: row;
+      margin-top: 5em;
+     
+
+}
+
+
+
+input {
+      width: 14em;
+      height: 2em;
+      margin: 5px 0 0 10px;
+}
+
+button {
+      width: 5em;
+      height: 1,5em;
+      margin: 5px 10px 10px 10px;
+      
+}
+
+.text-danger {
+      color: red;
+}

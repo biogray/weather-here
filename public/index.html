@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+  integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+  crossorigin=""/>
+
+  
+  <title>Document</title>
+</head>
+<body>
+  <header>
+       <h1>The Weather Here</h1>
+      
+  </header>
+  <main>
+
+<div><a href="/">Weather</a> | <a href="/logs">view logs</a>    </div>
+
+
+    <br>
+    <p>
+      <br><br>
+      Browser sensor coordinates: <br> <br>
+      Lat, Long: <span id="latitude"></span>&deg; <span id="longitude"></span>&deg; <br>
+
+      <br> Click on the map to override the coordinates and pull the weather. <br>
+      <input id="inputLat" type="number"></inpput>
+      <input id="inputLon" type="number"></inpput>
+    
+    </p>
+    <p>
+      The weather here is <span id="summary"></span>  with a temperature of
+      <span id="temperature"></span> degrees celcious.
+      The concentration of particulate matter (<span id="aq_parameter"></span>) is <span id="aq_value"></span> <span id="aq_units"></span>
+      , last read on <span id="aq_date"></span>. 
+      <br>
+      Location: <span id="aq_location"></span>.
+    </p>
+
+    <button type="check in" id="submitButton">Submit</button>
+  </main>
+
+
+
+  <h5>Leaflet div</h5>
+  <div id="database"> </div>
+  <div id="map"></div>
+
+  <br><br><br>
+  <pre id="chuckJoke"></pre>
+
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+  crossorigin=""></script>
+
+<script src="sketch.js"></script>
+
+
+</body>
+</html>
