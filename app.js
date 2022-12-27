@@ -1,3 +1,5 @@
+
+
 require('dotenv').config();  //assigning weather api key and server port 
 
 const express = require('express');
@@ -44,7 +46,7 @@ app.post('/api' , (request, response) => {
               'weather' : data.weather,
        });
         
-       console.log('database insert weather: ', data.weather)
+       console.log('database insert, request.body.weather: ', data.weather)
         
 
 
