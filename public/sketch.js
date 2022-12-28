@@ -78,7 +78,7 @@
                document.getElementById('aq_parameter').innerText= `${json.airQuality.results[0].measurements[indOfpm25].parameter}`;
                document.getElementById('aq_value').innerText= `${json.airQuality.results[0].measurements[indOfpm25].value}`;
                document.getElementById('aq_units').innerText= `${json.airQuality.results[0].measurements[indOfpm25].unit}`;
-               document.getElementById('aq_date').innerText= `${lastUpdated.split('T')[0]} at ${lastUpdated.split('T')[1].split('+')[0]}`;
+               document.getElementById('aq_date').innerText= `${lastUpdated.split('T')[0]} at ${lastUpdated.split('T')[1].split('+')[0]} o'clock`;
                document.getElementById('aq_location').innerText= `${json.airQuality.results[0].location}, ${json.airQuality.results[0].country}`;
 
               } 
