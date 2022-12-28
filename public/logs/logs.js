@@ -64,7 +64,7 @@ root.style.justifyContent = "space-around";
   divLoc.innerHTML= `${item.location}`;
  
   const dateString = new Date( item.time).toLocaleString()  ;
-  divTime.textContent= ` time: ${dateString}   `;
+  divTime.textContent= ` time: ${dateString}   `; 
 
   //divWeather.textContent= ` weather: ${ JSON.stringify(item.weather.temp) }   `;
  

@@ -2,3 +2,4 @@ node_modules/
 files/
 obj.js
 database.db
+.env

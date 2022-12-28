@@ -57,7 +57,8 @@
               //  console.log('pm 25 index of: ', filterIt(measurementsArr, 'pm25' )   )
               //  console.log('pm 10 index of: ', filterIt(measurementsArr, 'pm10' )   )
                var indOfpm25 = filterIt(measurementsArr, 'pm25' );
-               
+               if (indOfpm25 === null)  {indOfpm25 =0;  console.log('NO PM25 READING !!')};
+
                 location1 = `${json.airQuality.results[0].location}<br>${json.airQuality.results[0].country}`;
                
              
@@ -69,13 +70,15 @@
                 console.log('weather json: ', json);
                 console.log('weather main: ', weather);
                
+                let lastUpdated = json.airQuality.results[0].measurements[indOfpm25].lastUpdated
+           
            
                document.getElementById('temperature').innerText= `${json.weather.main.temp}`;
                document.getElementById('summary').innerText= `${json.weather.weather[0]["description"]}`;
                document.getElementById('aq_parameter').innerText= `${json.airQuality.results[0].measurements[indOfpm25].parameter}`;
                document.getElementById('aq_value').innerText= `${json.airQuality.results[0].measurements[indOfpm25].value}`;
                document.getElementById('aq_units').innerText= `${json.airQuality.results[0].measurements[indOfpm25].unit}`;
-               document.getElementById('aq_date').innerText= `${json.airQuality.results[0].measurements[indOfpm25].lastUpdated}`;
+               document.getElementById('aq_date').innerText= `${lastUpdated.split('T')[0]} at ${lastUpdated.split('T')[1].split('+')[0]}`;
                document.getElementById('aq_location').innerText= `${json.airQuality.results[0].location}, ${json.airQuality.results[0].country}`;
 
               } 
@@ -159,7 +162,7 @@ const fetchWeather = (lat,lon) => {
 
         measurementsArr = data.airQuality.results[0].measurements;
         indOfpm25 = filterIt(measurementsArr, 'pm25' );
-
+        if (indOfpm25 === null)  {indOfpm25 =0;  console.log('NO PM25 READING !!')};
 
    
       document.getElementById('temperature').innerText= `${data.weather.main.temp}`;
